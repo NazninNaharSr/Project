@@ -170,7 +170,7 @@ $con=mysqli_connect("localhost","root","","db");
     die("Connection Error: ".mysqli_connect_error()."<br/>");
   }
 
-  $sql="SELECT `oid`, `order_date`, `delivery_date`, `note` FROM orders";
+  $sql="SELECT `oid`, `order_date`, `delivery_date`, `note` FROM `order_list`";
   $result=mysqli_query($con,$sql);
   if(mysqli_num_rows($result)>0)
    {
