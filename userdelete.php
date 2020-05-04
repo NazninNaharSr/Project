@@ -16,7 +16,7 @@ $con=mysqli_connect("localhost","root","","db");
 if (isset($userName))
 {
 $id = $_GET['id'];
-$sql="DELETE FROM tailor WHERE id=$id";
+$sql="DELETE FROM user WHERE id=$id";
 if(mysqli_query($con,$sql))
 	{
 		header("Location:nhome.php");
