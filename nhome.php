@@ -153,7 +153,7 @@ th {
       echo "<td>".$row['email']."</td>";
       echo "<td>".$row['userName']."</td>";
       echo "<td>".$row['type']."</td>";
-      echo '<td><a href="useredit.php? id='.$row['id'].'&Name=' .$row['name'].'&Email='.$row['email'].'&Username='.$row['userName'].'&Usertype='.$row['type'].'">Edit</a> || <a href="delete.php?id=' .$row['id'].'">Delete</a></td>';
+      echo '<td><a href="useredit.php? id='.$row['id'].'&Name=' .$row['name'].'&Email='.$row['email'].'&Username='.$row['userName'].'&Usertype='.$row['type'].'">Edit</a> || <a href="userdelete.php?id=' .$row['id'].'">Delete</a></td>';
       echo "</tr>";
 
     
@@ -190,7 +190,7 @@ th {
       echo "<td>".$row['email']."</td>";
       echo "<td>".$row['userName']."</td>";
       echo "<td>".$row['type']."</td>";
-      echo '<td><a href="tailoredit.php? id='.$row['id'].'&Name=' .$row['name'].'&Email='.$row['email'].'&Username='.$row['userName'].'&Usertype='.$row['type'].'">Edit</a> || <a href="delete.php?id=' .$row['id'].'">Delete</a></td>';
+      echo '<td><a href="tailoredit.php? id='.$row['id'].'&Name=' .$row['name'].'&Email='.$row['email'].'&Username='.$row['userName'].'&Usertype='.$row['type'].'">Edit</a> || <a href="tailordelete.php?id=' .$row['id'].'">Delete</a></td>';
       echo "</tr>";
 
     
