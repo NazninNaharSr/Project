@@ -114,10 +114,49 @@ tr:hover {background-color:#f5f5f5;}
     echo "<h5>Welcome $name</h5>";
     ?>
 
-      <?php
-      //if we give product id then it will show a message is it delivered or not
-      ?>
+      
+    <?php
+$con=mysqli_connect("localhost","root","","db");
+  if(!$con)
+  {
+    die("Connection Error: ".mysqli_connect_error()."<br/>");
+  }
 
+  $sql="SELECT `oid`, `tid`, `eid`, `Done/Not` FROM `delivery` ";
+  $result=mysqli_query($con,$sql);
+  if(mysqli_num_rows($result)>0)
+   {
+    ?>
+    <table border='1' cellpadding='8'>
+      <tr>
+        <th>Order Id</th>
+        <th>Tailor Id</th>
+        <th>Employee Id</th>
+        <th>Done/Not</th>
+        
+      </tr>
+    <?php
+    while($row=mysqli_fetch_array($result))
+    {
+      echo "<tr>";
+      echo "<td>".$row['oid']."</td>";
+      echo "<td>".$row['tid']."</td>";
+      echo "<td>".$row['eid']."</td>";
+      echo "<td>".$row['Done/Not']."</td>";
+      
+      echo "</tr>";
+
+    
+    }
+    echo "</table>";
+   }
+   else
+   {
+    echo "No data found.<br/>";
+   }
+
+
+?>
      </div>  
   
   <div class="footer">
